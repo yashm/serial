@@ -2,8 +2,8 @@
 Changelog for package serial
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.1.7 (2014-01-02)
+------------------
 * Build tests on Travis.
 * Add unix timer tests, clarify tests are only on unix at present, move test builds into separate makefile.
 * Pre-fill buffer at start of read, to avoid the select if unnecessary.
