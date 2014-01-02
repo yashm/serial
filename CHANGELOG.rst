@@ -2,6 +2,20 @@
 Changelog for package serial
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Build tests on Travis.
+* Add unix timer tests, clarify tests are only on unix at present, move test builds into separate makefile.
+* Pre-fill buffer at start of read, to avoid the select if unnecessary.
+* Wrap nanoseconds when >= 1e9, rather than > 1e9.
+* Fix for computing an expiry without rollover.
+* Divide by 1e9 to get seconds from nanoseconds, instead of 1e6.
+* use static casts rather than C-style casting
+  C-style casting can result in undesired reinterpret_casts
+  So we should avoid them, see:
+  http://stackoverflow.com/questions/332030/when-should-static-cast-dynamic-cast-and-reinterpret-cast-be-used
+* Contributors: Christopher Baker, Mike Purvis, Nicolas Bigaouette, William Woodall
+
 1.1.6 (2013-10-17)
 ------------------
 * Move stopbits_one_point_five to the end of the enum, so that it doesn't alias with stopbits_two.
